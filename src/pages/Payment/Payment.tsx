@@ -141,7 +141,7 @@ const Payment = () => {
         rowData={payment}
         columnDefs={columnDefs}
         addButton={
-          <div className="flex gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <button
               onClick={() => navigate("/payment/add")}
               className="flex items-center gap-2 primary-color text-white px-5 py-2.5 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all font-outfit"

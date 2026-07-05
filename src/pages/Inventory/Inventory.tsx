@@ -164,10 +164,10 @@ const Inventory = () => {
         rowData={inventoryList}
         columnDefs={columnDefs}
         addButton={
-          <div className="flex gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <button
               onClick={handleExcelClick}
-              className="bg-green-50 text-green-700 border border-green-200 px-4 py-2 rounded-xl font-semibold shadow-sm hover:bg-green-600 hover:text-white transition-all"
+              className="bg-green-50 text-green-700 border border-green-200 px-4 py-2 rounded-xl font-semibold shadow-sm hover:bg-green-600 hover:text-white transition-all font-outfit"
             >
               Excel Upload
             </button>

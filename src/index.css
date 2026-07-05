@@ -817,6 +817,26 @@ span.flatpickr-weekday,
   display: flex;
   align-items: center;
   color: var(--color-gray-700);
+  overflow: hidden !important;
+}
+
+.ag-theme-quartz .ag-cell-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ag-theme-quartz .ag-cell-value {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ag-theme-quartz .ag-row {

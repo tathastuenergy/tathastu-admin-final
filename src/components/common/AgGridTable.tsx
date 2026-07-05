@@ -224,7 +224,7 @@ export function AgGridTable<TData>({
       filter: true,
       resizable: true,
       flex: 1,
-      minWidth: 100,
+      minWidth: 130,
       headerClass: "font-semibold text-gray-700",
     }),
     []
@@ -234,14 +234,14 @@ export function AgGridTable<TData>({
   return (
     <div className={cn("flex flex-col gap-4 w-full", className)}>
       {(title || showSearch || addButton) && (
-        <div className="sticky top-[64px] lg:top-[76px] z-10 flex flex-wrap items-center justify-between gap-4 px-1 py-3 bg-gray-50 dark:bg-gray-900 transition-all">
+        <div className="sticky top-[64px] lg:top-[76px] z-10 flex flex-col md:flex-row md:items-center justify-between gap-3 px-1 py-3 bg-gray-50 dark:bg-gray-900 transition-all">
           {title && (
-            <h2 className="text-xl font-bold dark:text-gray-400">{title}</h2>
+            <h2 className="text-xl font-bold dark:text-gray-400 w-full md:w-auto">{title}</h2>
           )}
           
-          <div className="flex items-center gap-3 flex-1 justify-end">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-1 justify-end w-full md:w-auto">
             {showSearch && (
-              <div className="relative max-w-sm w-full">
+              <div className="relative w-full sm:max-w-xs md:max-w-sm">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   type="text"
@@ -251,7 +251,9 @@ export function AgGridTable<TData>({
                 />
               </div>
             )}
-            {addButton}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto justify-end">
+              {addButton}
+            </div>
           </div>
         </div>
       )}
