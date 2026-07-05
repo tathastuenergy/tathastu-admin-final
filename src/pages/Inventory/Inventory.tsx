@@ -156,7 +156,7 @@ const Inventory = () => {
   ];
 
   return (
-    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <div className="p-6 bg-gray-50 dark:bg-gray-900">
       {loading && <Loader src="/loader.mp4" fullScreen />}
 
       <AgGridTable

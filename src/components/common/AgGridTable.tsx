@@ -207,9 +207,9 @@ export function AgGridTable<TData>({
   columnDefs,
   className,
   pagination = true,
-  paginationPageSize = 10,
+  paginationPageSize = 20,
   paginationPageSizeSelector = [10, 20, 50, 100],
-  height = "600px",
+  height = "calc(100vh - 280px)",
   rowSelection = "multiple",
   title,
   showSearch = true,
@@ -234,7 +234,7 @@ export function AgGridTable<TData>({
   return (
     <div className={cn("flex flex-col gap-4 w-full", className)}>
       {(title || showSearch || addButton) && (
-        <div className="flex flex-wrap items-center justify-between gap-4 px-1">
+        <div className="sticky top-[64px] lg:top-[76px] z-10 flex flex-wrap items-center justify-between gap-4 px-1 py-3 bg-gray-50 dark:bg-gray-900 transition-all">
           {title && (
             <h2 className="text-xl font-bold dark:text-gray-400">{title}</h2>
           )}
@@ -258,7 +258,7 @@ export function AgGridTable<TData>({
 
       <div 
         className="ag-theme-quartz w-full shadow-sm rounded-xl overflow-hidden"
-        style={{ height }}
+        style={{ height, minHeight: "450px" }}
       >
         <AgGridReact
           rowData={rowData}
